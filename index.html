@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
     <title>Isaac Barron</title>
 
@@ -168,8 +170,15 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Projects</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <div class="w3-content w3-display-container">
+  <img class="mySlides" src="img/app.png" style="width:100%">
+  <img class="mySlides" src="img/mathematica.png" style="width:100%">
+  <img class="mySlides" src="img/max.png" style="width:100%">
+  <img class="mySlides" src="img/website.png" style="width:100%">
+
+  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+</div>
                 </div>
             </div>
         </div>
@@ -242,6 +251,30 @@
 
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2LnBRwpuPE-lf098yD7NQAOWNe1mw_1M&callback=initMap">
+
+    </script>
+
+    <script>
+/*SlideShow*/
+var slideIndex = 1;
+showDivs(slideIndex);
+
+
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
     </script>
 
 
